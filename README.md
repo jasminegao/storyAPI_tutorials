@@ -3,9 +3,9 @@ storyAPI_tutorials
 
 At bitly, a story is a group of related links that are about the same thing. This is based on shared topics and phrases extracted from the content of each link. On  [rt.ly](http://rt.ly), our realtime search engine, each link has a story page which can be accessed by clicking on the circular 'i' icon.
 
-The following are simple tutorials to help you get started with using bitly's [story APIs](http://dev.bitly.com/story_api.html), which allow you to look at aggregate data for each story or group of related links. For these tutorials we will be using a generic access token generated for the bitlyapitutorials account. To get your own
+The following are simple tutorials to help you get started with using bitly's [story APIs](http://dev.bitly.com/story_api.html), which allow you to look at aggregate data for a story or group of related links. For these tutorials we will be using a generic access token generated for the bitlyapitutorials account. To get your own
 access token, [click here](https://bitly.com/a/oauth_apps) to generate
-one on bitly.com or visit our [OAuth documentation](http://dev.bitly.com/authentication.html) for a walkthrough of the authentication process. 
+one or visit our [OAuth documentation](http://dev.bitly.com/authentication.html) for a walkthrough of the authentication process. 
 
 Listed are tutorials to perform the following:
 
@@ -18,7 +18,7 @@ Listed are tutorials to perform the following:
 
 <a id="story_info"></a>Getting the story id for a link or the links from a story id
 -------------------------------------------------------------------------------------
-To find out what story one or multiple links belong to, you can use the [/v3/story_api/story_info](http://dev.bitly.com/story_api.html#v3_story_api_story_info) endpoint and pass the bitly link(s) into the `link` parameter:
+To find out what story a bitly link belongs to, you can use the [/v3/story_api/story_info](http://dev.bitly.com/story_api.html#v3_story_api_story_info) endpoint and pass it into `link` parameter:
 
 ```python
 import requests
