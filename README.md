@@ -13,7 +13,7 @@ Listed are tutorials to perform the following:
 * Searching for stories
 * Getting a story's title
 * Returning the metadata of a story
-* Seeing a story's distribution across the internet and the world
+* Seeing a story's distribution
 * Looking at a story's historical clickrates
 
 <a id="story_info"></a>Getting the story id for a link or the links from a story id
@@ -63,7 +63,7 @@ data = json.loads(response.content)
 print data
 ```
 
-This search will return the a list of recent links related to "istanbul", "gezi park" and "turkey" and the corresponding story id for those links. 
+This search will return the a list of recent links related to the `phrases` "istanbul, "gezi park" and "turkey" and the corresponding `story id` for those links. 
 
 
 <a id="title"></a>Getting a story's title
@@ -111,9 +111,9 @@ data = json.loads(response.content)
 print data
 ```
 
-The above code returns the current click rate of the story, a list of page titles for the links contained in that story, a list of image urls extracted from those links and the total number of clicks on the story. Additional fields that may also be returned are `related`, which gives back a list of related pages, `shares`, the number of times the story has been shared, and `encoders`, the number of times the story has been shortened.  
+The above code returns the current click `rates` of the story, a list of page `titles` for the links contained in that story, a list of `images` extracted from those links and the total number of `clicks` on the story. Additional fields that may also be returned are `related`, which gives back a list of related pages, `shares`, the number of times the story has been shared, and `encoders`, the number of times the story has been shortened.  
 
-<a id="distribution"></a>Seeing a story's distribution across the internet and the world
+<a id="distribution"></a>Seeing a story's distribution
 --------------------------------------------------------------------------------------
 Each story is distributed and consumed in a unique way. We can see, for example, where on the internet a story is receiving its clicks as well as where, geopgraphically, in the world those clicks are originating from. This can be done using the [/v3/story_api/distribution](http://dev.bitly.com/story_api.html#v3_story_api_distribution) endpoint and, like with the metadata endpoint, specifying which distributions we want returned in the `field`:
 
@@ -142,7 +142,7 @@ Here, given a story id, we `limit` the results to 10 for each `field` and get ba
 
 <a id="history"></a>Looking at a story's historical clickrates
 --------------------------------------------------------------------------------
-On top of the distribution data for a story we can also look at the historical clickrate during a specified time period using the [/v3/story_api/history](http://dev.bitly.com/story_api.html#v3_story_api_history) endpoint:
+On top of the distribution data for a story, we can also look at the historical clickrates using the [/v3/story_api/history](http://dev.bitly.com/story_api.html#v3_story_api_history) endpoint:
 
 ```
 import requests
@@ -166,6 +166,6 @@ data = json.loads(response.content)
 print data
 ```
 
-In this example, passing "top10_by_current_rate" into the `filters` parementer gives us back the clickrate history for the story as a whole as well as the individual histories for the top 10 links in that story. The time period we are returning clickrates for is during the last 10 minutes as specified by the `start_time` and `end_time` parementers, which take unix timestamps (though we've avoided that by using the `datetime` library). 
+In this example, passing `top10_by_current_rate` into the `filters` parementer gives us back the clickrate history for the story as a whole as well as the individual histories for the top 10 links in that story. The time period we are returning clickrates for is during the last 10 minutes as specified by the `start_time` and `end_time` parementers, which take unix timestamps (though we've avoided that by using the `datetime` library). 
 
 Additional `filters` that can be used are `merged`, which returns the clickrate history of a story as a whole, and `all`, which returns the individual histories for every link in the story.  
