@@ -18,7 +18,7 @@ Listed are tutorials to perform the following:
 
 <a id="story_info"></a>Getting the story id for a link or the links from a story id
 -------------------------------------------------------------------------------------
-To find out what story one or multiple links belong to, you can use the [/v3/story_api/story_info](http://dev.bitly.com/story_api.html#v3_story_api_story_info) endpoint and pass the bitly link(s) into the `link` paremeter:
+To find out what story one or multiple links belong to, you can use the [/v3/story_api/story_info](http://dev.bitly.com/story_api.html#v3_story_api_story_info) endpoint and pass the bitly link(s) into the `link` parameter:
 
 ```python
 import requests
@@ -43,7 +43,7 @@ Conversely, you can replace the `link` parameter with a `story_id` parameter if 
 
 <a id="phrases"></a>Searching for stories
 --------------------------------------------------------------------------------
-You can also search for stories as you would links on [rt.ly](http://rt.ly) by querying with keywords or phrases. To find stories about the riots in Instanbul, for example, connect to the [/v3/story_api_story_from_phrases](http://dev.bitly.com/story_api.html#v3_story_api_story_from_phrases) endpoint and pass your search term(s) into the `phrases` paremeter:
+You can also search for stories as you would links on [rt.ly](http://rt.ly) by querying with keywords or phrases. To find stories about the riots in Istanbul, for example, connect to the [/v3/story_api_story_from_phrases](http://dev.bitly.com/story_api.html#v3_story_api_story_from_phrases) endpoint and pass your search term(s) into the `phrases` parameter:
 
 ```
 import requests
@@ -68,7 +68,7 @@ This search will return the a list of recent links related to the `phrases` "ist
 
 <a id="title"></a>Getting a story's title
 --------------------------------------------------------------------------------
-Given a story id or link(s), the [/v3/story_api/title](http://dev.bitly.com/story_api.html#v3_story_api_title) endpoint can be used to return the most representatitive title:
+Given a story id or link(s), the [/v3/story_api/title](http://dev.bitly.com/story_api.html#v3_story_api_title) endpoint can be used to return the most representative title:
 
 ```
 import requests
@@ -115,7 +115,7 @@ The above code returns the current click `rates` of the story, a list of page `t
 
 <a id="distribution"></a>Seeing a story's distribution
 --------------------------------------------------------------------------------------
-Each story is distributed and consumed in a unique way. We can see, for example, where on the internet a story is receiving its clicks as well as where, geopgraphically, in the world those clicks are originating from. This can be done using the [/v3/story_api/distribution](http://dev.bitly.com/story_api.html#v3_story_api_distribution) endpoint and, like with the metadata endpoint, specifying which distributions we want returned in the `field`:
+Each story is distributed and consumed in a unique way. We can see, for example, where on the internet a story is receiving its clicks as well as where, geographically, in the world those clicks are originating from. This can be done using the [/v3/story_api/distribution](http://dev.bitly.com/story_api.html#v3_story_api_distribution) endpoint and, like with the metadata endpoint, specifying which distributions we want returned in the `field`:
 
 ```
 import requests
@@ -166,6 +166,6 @@ data = json.loads(response.content)
 print data
 ```
 
-In this example, passing `top10_by_current_rate` into the `filters` parementer gives us back the clickrate history for the story as a whole as well as the individual histories for the top 10 links in that story. The time period we are returning clickrates for is during the last 10 minutes as specified by the `start_time` and `end_time` parementers, which take unix timestamps (though we've avoided that by using the `datetime` library). 
+In this example, passing `top10_by_current_rate` into the `filters` parameter gives us back the clickrate history for the story as a whole as well as the individual histories for the top 10 links in that story. The time period we are returning clickrates for is during the last 10 minutes as specified by the `start_time` and `end_time` parameters, which take unix timestamps (though we've avoided that by using the `datetime` library). 
 
 Additional `filters` that can be used are `merged`, which returns the clickrate history of a story as a whole, and `all`, which returns the individual histories for every link in the story.  
