@@ -4,7 +4,7 @@ import settings
 
 query_params = {
     'access_token': settings.ACCESS_TOKEN,
-    'story_id': "76972ebca282673ae0eac65bb1ed393c",
+    'story_id': "b966d4d15f38ad3a2b9c40b9cab185a2",
     'limit': 10,
     'field': ("cities", "domains", "topics")
 }
