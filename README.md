@@ -45,7 +45,7 @@ Conversely, you can replace the `link` parameter with a `story_id` parameter if 
 --------------------------------------------------------------------------------
 You can also search for stories as you would links on [rt.ly](http://rt.ly) by querying with keywords or phrases. To find stories about the riots in Istanbul, for example, connect to the [/v3/story_api_story_from_phrases](http://dev.bitly.com/story_api.html#v3_story_api_story_from_phrases) endpoint and pass your search term(s) into the `phrases` parameter:
 
-```
+```python
 import requests
 import json
 import settings
@@ -70,7 +70,7 @@ This search will return the a list of recent links related to the `phrases` "ist
 --------------------------------------------------------------------------------
 Given a story id or link(s), the [/v3/story_api/title](http://dev.bitly.com/story_api.html#v3_story_api_title) endpoint can be used to return the most representative title:
 
-```
+```python
 import requests
 import json
 import settings
@@ -92,7 +92,7 @@ print data
 --------------------------------------------------------------------------------
 We can get back even more specific data for a given story id or link(s) by using the [/v3/story_api/metadata](http://dev.bitly.com/story_api.html#v3_story_api_metadata) endpoint and specifying what `field`s we want returned:
 
-```
+```python
 import requests
 import json
 import settings
@@ -117,7 +117,7 @@ The above code returns the current click `rates` of the story, a list of page `t
 --------------------------------------------------------------------------------------
 Each story is distributed and consumed in a unique way. We can see, for example, where on the internet a story is receiving its clicks as well as where, geographically, in the world those clicks are originating from. This can be done using the [/v3/story_api/distribution](http://dev.bitly.com/story_api.html#v3_story_api_distribution) endpoint and, like with the metadata endpoint, specifying which distributions we want returned in the `field`:
 
-```
+```python
 import requests
 import json
 import settings
@@ -144,7 +144,7 @@ Here, given a story id, we `limit` the results to 10 for each `field` and get ba
 --------------------------------------------------------------------------------
 On top of the distribution data for a story, we can also look at the historical clickrates using the [/v3/story_api/history](http://dev.bitly.com/story_api.html#v3_story_api_history) endpoint:
 
-```
+```python 
 import requests
 import json
 import datetime
