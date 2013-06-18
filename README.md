@@ -26,7 +26,7 @@ import json
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'link': "http://bit.ly/14eLfvJ"
 }
 
@@ -51,7 +51,7 @@ import json
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'phrases': ("istanbul", "gezi park", "turkey")
 }
 
@@ -76,7 +76,7 @@ import json
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'story_id': "b966d4d15f38ad3a2b9c40b9cab185a2"
 }
 
@@ -98,7 +98,7 @@ import json
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'story_id': "b966d4d15f38ad3a2b9c40b9cab185a2",
     'field': ("rates", "titles", "images", "clicks")
 }
@@ -123,7 +123,7 @@ import json
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'story_id': "b966d4d15f38ad3a2b9c40b9cab185a2",
     'limit': 10,
     'field': ("cities", "domains", "referrers")
@@ -151,7 +151,7 @@ import datetime
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'story_id': "b966d4d15f38ad3a2b9c40b9cab185a2",
     'filters': ("top10_by_current_rate"),
     'start_time': datetime.timedelta(minutes=10),

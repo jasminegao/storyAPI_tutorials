@@ -3,7 +3,7 @@ import json
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'story_id': "b966d4d15f38ad3a2b9c40b9cab185a2",
     'limit': 10,
     'field': ("cities", "domains", "topics")
